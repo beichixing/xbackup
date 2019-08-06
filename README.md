@@ -9,7 +9,11 @@
 ·虚拟主机：下载zip源码，解压到根目录，将文件夹命名为xbackup
 
 
-### 2.打开config.php文件，更改里面的数据库及配置内容。
+
+
+### 2.设置文件权限777.打开config.php文件，更改里面的数据库及配置内容。
+
+权限设置命令：chmod 777 xbackup
 
 ### 3使用linux定时任务执行 网站域名/xbackup/back.php 即可。
 命令 crontab -e

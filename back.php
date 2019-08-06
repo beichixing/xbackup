@@ -192,14 +192,14 @@ html;
 
 	}
 
-function aliyun($sourceFileDir,$cfg_aliyun_id,$cfg_aliyun_key,$cfg_aliyun_url,$cfg_aliyun_backet,$sql_name){
+function aliyun($sourceFileDir,$cfg_aliyun_id,$cfg_aliyun_key,$cfg_aliyun_url,$cfg_aliyun_bucket,$sql_name){
 // 阿里云主账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM账号进行API访问或日常运维，请登录 https://ram.console.aliyun.com 创建RAM账号。
 $accessKeyId = $cfg_aliyun_id;
 $accessKeySecret = $cfg_aliyun_key;
 // Endpoint以杭州为例，其它Region请按实际情况填写。
 $endpoint = $cfg_aliyun_url;
 // 存储空间名称
-$backet= $cfg_aliyun_backet;
+$backet= $cfg_aliyun_bucket;
 // 文件名称
 $object = $sql_name;
 // <yourLocalFile>由本地文件路径加文件名包括后缀组成，例如/users/local/myfile.txt
@@ -225,7 +225,7 @@ if($cfg_type == 1){
 		unlink($to_file_name);
 }else if($cfg_type == 2){
 		//阿里云oss备份
-		$response = aliyun($to_file_name,$cfg_aliyun_id,$cfg_aliyun_key,$cfg_aliyun_url,$cfg_aliyun_backet,$sql_name);
+		$response = aliyun($to_file_name,$cfg_aliyun_id,$cfg_aliyun_key,$cfg_aliyun_url,$cfg_aliyun_bucket,$sql_name);
 		echo '执行成功';
 		unlink($to_file_name);
 }else{
