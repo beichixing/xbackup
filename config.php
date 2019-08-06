@@ -7,7 +7,7 @@ $cfg_dbpwd = '';	//数据库密码
 $cfg_db_language = 'utf8'; 	//数据库编码
 $date_db = date("Y-m-d H:i:s");
 $sql_name = $date_db."-".$cfg_dbname.".sql";
-$to_file_name = 'back_log/'.$date_db."-".$cfg_dbname.".sql"; //备份文件命名规则
+$to_file_name = $date_db."-".$cfg_dbname.".sql"; //备份文件命名规则
 $cfg_type = '1'; 	//	备份方式：1.邮箱备份 2. 阿里云oss备份
 
 
